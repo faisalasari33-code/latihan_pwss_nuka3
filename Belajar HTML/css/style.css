@@ -1,0 +1,222 @@
+* {
+            margin: 0;
+        }
+        .container{
+            width: 90%;
+            margin:auto;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-image: linear-gradient(to bottom, #f53d2d, #ff5722 );
+            padding: 15px;
+            color: white;
+            /* position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: 1000; */
+        }
+        /* .header .container{
+            display: flex;
+            justify-content: space-between;
+        } */
+        /* .cari {
+            margin: 12px;
+        }
+        .cari input {
+            width: 300px;
+            height: 25px;
+        } */
+        .menu {
+            background-image: linear-gradient(to top, #f53d2d, #fc511d);
+            padding: 10px;
+            /* position: fixed;
+            top: 60px;
+            left: 0px;
+            width: 100%;
+            z-index: 1000; */
+        }   
+
+        .menu ul {
+            list-style: none;
+            margin-left: -40px;
+        }
+        
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+            padding : 10px;
+
+        }
+        
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu ul li :hover {
+            background-color: #f53d2d;
+        }
+        .row{
+            width: 100%;
+            padding-left: 10px;
+        }
+        /* .content{
+            padding: 100px;
+        } */
+        .banner{
+            margin-top: 10px;
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+
+        }
+        .bannerkiri{
+            /* flex: 65%; */
+            width: 65%;
+        }
+        .img-bannerkiri {
+            width: 100%;
+            height: 100%;
+        }
+        .bannerkanan{
+            width: 35%;
+            height: 100%;
+            /* flex: 35%; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .img-bannerkanan {
+            width: 100%;
+            height: 100%;
+            /* flex: 1; */
+        }
+        .produk-terlaris {
+            margin-top: 20px;
+        }
+        .products {
+            margin-top: 10px;
+            display: grid;
+            /* grid-template-columns: auto auto auto auto auto; */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 35px;
+            /* display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; */
+        }
+        .product-item {
+            width: 100%;
+            height: 250px;
+            border: solid 1px black;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px;
+        }
+        .product-item .img-product {
+            width: 100%;
+            height: 75%;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .product-item .name-product{
+            /* text-decoration: none; */
+            background-color: white;
+            width: 100%;
+            height: 25%;
+            text-align: center;
+            margin-top: -5px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0px 0px 5px 5px;
+        }
+        .products a{
+            text-decoration: none;
+        }
+        .product-item:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 100px;
+            margin-top: 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-top: solid 5px #4a90e2;
+        }
+        .detail-product .container{
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            /* align-items: flex-start; */
+            flex-wrap: nowrap;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .detail-product .img-product{
+            width: 300px;
+            height: 300px;
+        }
+        .detail-product .name-product{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 15px;
+        }
+        .detail-product .Harga{
+            margin-bottom: 15px;
+        }
+        .detail-product .deskripsi-text{
+            margin-bottom: 15px;
+        }  
+        .detail-product .deskripsi{
+            text-align: justify;
+        }
+        .detail-product .deskripsi-button{
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hamburger{
+            display: none;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        .hamburger .line{
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        @media screen and (max-width: 430px) {
+            .hamburger{
+                display: flex;
+            }
+            .menu ul{
+                display: none;
+            }
+            .products{
+                grid-template-columns: auto auto;
+            }
+            .detail-product{
+                flex-direction: column;
+                align-items: center;
+            }
+            #menu-toggle:checked + .hamburger + ul {
+                display: flex;
+            }
+        }
